@@ -1,4 +1,4 @@
-# MultiMAE: Multi-modal Multi-task Masked Autoencoders
+# MultiMAE: Multi-modal Multi-task Masked Autoencoders (ImageNet-100)
 
 [Roman Bachmann*](https://roman-bachmann.github.io/), [David Mizrahi*](https://dmizrahi.com), [Andrei Atanov](https://andrewatanov.github.io/), [Amir Zamir](https://vilab.epfl.ch/zamir/)
 

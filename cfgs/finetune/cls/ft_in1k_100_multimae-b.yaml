@@ -1,5 +1,5 @@
 # Finetune from:
-finetune: '/path/to/pretrained_weights' # Change me
+finetune: './output/pretrain/multimae-b_98_rgb+-depth-semseg_100/checkpoint-99.pth' # Change me
 
 # Model
 model: multivit_base
@@ -18,12 +18,12 @@ dist_eval: True
 layer_decay: 0.65
 
 # Data
-data_path: '/path/to/dataset' # Change me
-eval_data_path: '/path/to/eval_dataset' # Change me
+data_path: './datasets/image_net_100/train/rgb' # Change me
+eval_data_path: './datasets/image_net_100/val/rgb' # Change me
 
 # Wandb logging
 log_wandb: False # Set to True to activate logging to Weights & Biases
 wandb_project: 'multimae-finetune-cls'
 wandb_entity: null # Change if needed
-wandb_run_name: ft_in1k_100e_multimae-b
-output_dir: 'output/finetune/cls/ft_in1k_100e_multimae-b'
+wandb_run_name: ft_in1k_100_multimae-b
+output_dir: 'output/finetune/cls/ft_in1k_100_multimae-b'

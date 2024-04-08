@@ -46,7 +46,7 @@ from utils.optim_factory import (LayerDecayValueAssigner, create_optimizer,
 
 def get_args():
     config_parser = parser = argparse.ArgumentParser(description='Training Config', add_help=False)
-    parser.add_argument('-c', '--config', default='', type=str, metavar='FILE',
+    parser.add_argument('-c', '--config', default='./cfgs/finetune/cls/ft_in1k_100_multimae-b.yaml', type=str, metavar='FILE',
                         help='YAML config file specifying default arguments')
 
     parser = argparse.ArgumentParser('MultiMAE fine-tuning and evaluation script for image classification', add_help=False)
