@@ -1,3 +1,7 @@
 echo "Downloading weights for MultiMAE..."
-wget https://github.com/EPFL-VILAB/MultiMAE/releases/download/pretrained-weights/multimae-b_98_rgb+-depth-semseg_1600e_timm-bafa5499.pth
+mkdir -p checkpoints
+cd checkpoints
+gdown https://drive.google.com/uc?id=1ctQXDPPL8SQGoVR4IWCJ_K8v_PF-nFPe -O checkpoints.zip
+unzip checkpoints.zip
+rm checkpoints.zip
 echo "Done."

@@ -1,15 +1,25 @@
-# MultiMAE: Multi-modal Multi-task Masked Autoencoders (ImageNet-100)
-
-[Roman Bachmann*](https://roman-bachmann.github.io/), [David Mizrahi*](https://dmizrahi.com), [Andrei Atanov](https://andrewatanov.github.io/), [Amir Zamir](https://vilab.epfl.ch/zamir/)
-
-
- [`Website`](https://multimae.epfl.ch) | [`arXiv`](https://arxiv.org/abs/2204.01678) | [`BibTeX`](#citation)
-
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EPFL-VILAB/MultiMAE/blob/main/MultiMAE_Demo.ipynb)  [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/EPFL-VILAB/MultiMAE)
-
-
+# GNR 638: MultiMAE: Multi-modal Multi-task Masked Autoencoders (ImageNet-100)
 Official PyTorch implementation and pre-trained models for MultiMAE: Multi-modal Multi-task Masked Autoencoders.
 
+## Instructions
+1. Create environment:
+```bash
+conda create -n multimae python=3.8
+conda activate multimae
+pip install -r requirements.txt
+```
+
+2. Download ImageNet-100 dataset:
+```bash
+python ./scripts/down_process_ImageNet100.sh
+```
+
+3. Download Model Weights:
+```bash
+python ./scripts/down_weights.sh
+```
+
+4. To reproduce results, open notebook `MultiMAE_Demo.ipynb` and run the cells, make sure to provide appropraite paths for model weights.
 
 <p align="center">
 <img src="assets/multimae_fig.png" width=100% height=100% 
@@ -126,25 +136,8 @@ See [FINETUNING.md](FINETUNING.md) for fine-tuning instructions.
 
 For interactive demos, please see our [`website`](https://multimae.epfl.ch). Open our [`Colab notebook`](https://colab.research.google.com/github/EPFL-VILAB/MultiMAE/blob/main/MultiMAE_Demo.ipynb) to play around with the visualization code, or simply upload an image to our [`Hugging Face Spaces demo`](https://huggingface.co/spaces/EPFL-VILAB/MultiMAE).
 
-
-## Acknowledgement
-
-This repository is built using the [timm](https://github.com/rwightman/pytorch-image-models/tree/master/timm), [DeiT](https://github.com/facebookresearch/deit), [DINO](https://github.com/facebookresearch/dino
-), [MoCo v3](https://github.com/facebookresearch/moco-v3), [BEiT](https://github.com/microsoft/unilm/tree/master/beit), [MAE-priv](https://github.com/BUPT-PRIV/MAE-priv), and [MAE](https://github.com/facebookresearch/mae) repositories.
-
 ## License
 
 This project is under the CC-BY-NC 4.0 license. See [LICENSE](LICENSE) for details.
 
-## Citation
 
-If you find this repository helpful, please consider citing our work:
-
-```BibTeX
-@article{bachmann2022multimae,
-  author    = {Roman Bachmann and David Mizrahi and Andrei Atanov and Amir Zamir},
-  title     = {{MultiMAE}: Multi-modal Multi-task Masked Autoencoders},
-  booktitle = {European Conference on Computer Vision},
-  year      = {2022},
-}
-```
