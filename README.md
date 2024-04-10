@@ -11,12 +11,13 @@ pip install -r requirements.txt
 
 2. Download ImageNet-100 dataset:
 ```bash
-python ./scripts/down_process_ImageNet100.sh
+bash ./scripts/down_process_ImageNet100.sh
+bash ./scripts/down_modalities.sh
 ```
 
 3. Download Model Weights:
 ```bash
-python ./scripts/down_weights.sh
+bash ./scripts/down_weights.sh
 ```
 
 4. To reproduce results, open notebook `MultiMAE_Demo.ipynb` and run the cells, make sure to provide appropraite paths for model weights.
